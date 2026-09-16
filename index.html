@@ -1,7 +1,18 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f3efff"><title>민정스터디</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css"></head><body>
 <header><h1>민정스터디 📚</h1><small id="syncStatus">로컬 모드</small></header>
 <main>
-<section id="home" class="page active"><div class="hero card"><div>🔥 연속 학습<strong id="streak">0일</strong></div><div>오늘 학습<strong><span id="done">0</span>/<span id="goal">10</span></strong></div></div><button class="primary big" id="start">오늘 학습 시작</button><button id="extra">+ 10개 더 공부하기</button><div class="card"><h2>오늘만 학습량 변경</h2><div class="row"><input id="tempGoal" type="number" min="1" step="1"><button id="saveTemp">변경</button></div></div></section>
+<section id="home" class="page active"><div class="hero card"><div>🔥 연속 학습<strong id="streak">0일</strong></div><div>오늘 학습<strong><span id="done">0</span>/<span id="goal">10</span></strong></div></div><div class="card"><h2>오늘 학습</h2>
+    <button class="primary big" id="startWords">🔤 영단어 학습</button>
+    <button class="big" id="startWrong">📸 오답노트 학습</button>
+    <div id="subjectChooser" class="hidden">
+      <p><b>오답 과목 선택</b></p>
+      <button data-subject="국어">국어</button>
+      <button data-subject="영어">영어</button>
+      <button data-subject="자료조직개론">자료조직개론</button>
+      <button data-subject="정보봉사개론">정보봉사개론</button>
+    </div>
+    </div>
+    <button id="extra">+ 10개 더 공부하기</button><div class="card"><h2>오늘만 학습량 변경</h2><div class="row"><input id="tempGoal" type="number" min="1" step="1"><button id="saveTemp">변경</button></div></div></section>
 <section id="study" class="page"><div class="card center"><b id="kind"></b><div id="question"></div><button class="primary" id="reveal">정답/해설 보기</button><div id="answer" class="answer hidden"></div><div id="ratings" class="ratings hidden"><button data-r="again">😵 몰랐음</button><button data-r="hard">🤔 헷갈림</button><button data-r="good">😎 알았음</button></div></div><button id="stop">학습 종료</button></section>
 <section id="library" class="page"><div class="tabs"><button class="tab active" data-tab="words">영단어</button><button class="tab" data-tab="wrong">오답노트</button></div>
 <div id="words"><div class="card"><h2>영단어 등록</h2><input id="word" placeholder="영단어"><input id="meaning" placeholder="뜻"><input id="memo" placeholder="메모/헷갈리는 단어"><button class="primary" id="addWord">등록</button></div><div id="wordList"></div></div>
