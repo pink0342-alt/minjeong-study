@@ -1,5 +1,5 @@
 // Minjeong Study service worker — cache refresh 2026-10-11
-const CACHE = 'ms-v034';
+const CACHE = 'ms-v035';
 const ASSETS = ['./', './index.html', './style.css', './manifest.webmanifest', './icon.svg'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting()));
